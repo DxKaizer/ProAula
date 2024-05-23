@@ -1,0 +1,70 @@
+<div class="container mt-5">
+    <div class="form-image">
+      <img src="https://github.com/Andres06B/imagenes/blob/main/images5-removebg-preview.png?raw=true" alt="Mascota">
+    </div>
+    <div>
+      <h2 class="mb-4">Detalles de la consulta</h2>
+      <div *ngIf="consulta">
+        <div class="mb-3">
+          <label class="form-label">Nombre:</label>
+          <p>{{ consulta.Nombre }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Especie:</label>
+          <p>{{ consulta.Especie }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Sexo:</label>
+          <p>{{ consulta.Sexo }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Raza:</label>
+          <p>{{ consulta.Raza }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Fecha de Nacimiento:</label>
+          <p>{{ consulta.FechaNacimiento | date:'yyyy-MM-dd' }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Edad:</label>
+          <p>{{ consulta.Edad }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Propietario:</label>
+          <p>{{ consulta.Propietario }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Cédula:</label>
+          <p>{{ consulta.Cedula }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Celular:</label>
+          <p>{{ consulta.Celular }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Dirección:</label>
+          <p>{{ consulta.Direccion }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Correo:</label>
+          <p>{{ consulta.Correo }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Valor de Consulta:</label>
+          <p>{{ consulta.ValorConsulta | currency }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Fecha de Cita:</label>
+          <p>{{ consulta.FechaCita | date:'yyyy-MM-dd' }}</p>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Hora de Cita:</label>
+          <p>{{ consulta.HoraCita }}</p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <button type="button" class="btn btn-secondary" routerLink="/ListaConsulta">Volver</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

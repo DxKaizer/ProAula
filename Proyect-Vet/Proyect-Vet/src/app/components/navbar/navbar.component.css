@@ -1,0 +1,45 @@
+.btn-outline-success {
+    background-color: #ff6347;
+    color: white;
+    font-weight: bold;
+    border-color: #ff6347;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #fff;
+    color: #ff6347
+  }
+
+  .navbar {
+    background-color: #001a4f;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    width: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-brand img {
+    height: 3rem;
+    margin-right: 1rem;
+    right: 30px;
+    top: 20px;
+  }
+  
+  .text-coral {
+    right: 30px;
+    top: 20px;
+    color: #ff6347;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,69 @@
+<div class="container mt-5">
+    <div class="form-image">
+        <img src="https://github.com/Andres06B/imagenes/blob/main/images5-removebg-preview.png?raw=true" alt="Mascota">
+    </div>
+    <div>
+        <h2 class="mb-4">Detalles de la consulta</h2>
+        <div *ngIf="consulta">
+            <div class="mb-3">
+                <label class="form-label">Médico Responsable:</label>
+                <p>{{ consulta.MedicoResponsable }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha:</label>
+                <p>{{ consulta.Fecha | date:'yyyy-MM-dd' }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre del Propietario:</label>
+                <p>{{ consulta.NombrePropietario }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Dirección:</label>
+                <p>{{ consulta.Direccion }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Teléfono:</label>
+                <p>{{ consulta.Telefono }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Correo:</label>
+                <p>{{ consulta.Correo }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nombre de la Mascota:</label>
+                <p>{{ consulta.NombreMascota }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha de Nacimiento:</label>
+                <p>{{ consulta.FechaNacimiento | date:'yyyy-MM-dd' }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha de Ingreso de la Mascota:</label>
+                <p>{{ consulta.FechaIngresoMascota | date:'yyyy-MM-dd' }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Hora:</label>
+                <p>{{ consulta.Hora }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Vacunas:</label>
+                <p>{{ consulta.Vacunas }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Motivo de Presentación:</label>
+                <p>{{ consulta.MotivoPresentacion }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Motivo de la Consulta:</label>
+                <p>{{ consulta.MotivoConsulta }}</p>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Información Importante de la Mascota:</label>
+                <p>{{ consulta.InformacionImportanteMascota }}</p>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary" routerLink="/ListaConsultaEs">Volver</button>
+            </div>
+        </div>
+    </div>
+</div>

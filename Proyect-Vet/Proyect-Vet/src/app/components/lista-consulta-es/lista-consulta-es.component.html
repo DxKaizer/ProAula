@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://github.com/Andres06B/imagenes/blob/main/Captura_de_pantalla_2024-05-12_161340-removebg-preview%20(1).png?raw=true" alt="Adry Veterinaria Logo" class="mr-2">
+            <span class="text-coral">Adry</span>Veterinaria
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <button class="btn btn-outline-success" type="button" aria-label="Log out" routerLink="/opcionMenu">
+                    <i class="fa-solid fa-right-from-bracket ms-1" aria-hidden="true"></i>
+                    Volver
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="search-add-container">
+        <div class="search-container">
+            <form class="d-flex" (submit)="filterList()">
+                <input class="form-control me-2" type="search" placeholder="Buscar por Propietario" [(ngModel)]="searchText" name="searchText" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+        <div class="add-appointment-container">
+            <button class="btn btn-primary" type="button" routerLink="/AgregarConsultaEs">Agregar Cita</button>
+        </div>
+    </div>
+    <div class="table-container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Médico Responsable</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Nombre del Propietario</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Nombre de la Mascota</th>
+                    <th scope="col">Fecha de Nacimiento</th>
+                    <th scope="col">Fecha de Ingreso de la Mascota</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Vacunas</th>
+                    <th scope="col">Motivo de Presentación</th>
+                    <th scope="col">Motivo de la Consulta</th>
+                    <th scope="col">Información Importante de la Mascota</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of filteredList" class="table-active">
+                    <td>{{item.ID}}</td>
+                    <td>{{item.MedicoResponsable}}</td>
+                    <td>{{item.Fecha | date:'yyyy-MM-dd'}}</td>
+                    <td>{{item.NombrePropietario}}</td>
+                    <td>{{item.Direccion}}</td>
+                    <td>{{item.Telefono}}</td>
+                    <td>{{item.Correo}}</td>
+                    <td>{{item.NombreMascota}}</td>
+                    <td>{{item.FechaNacimiento}}</td>
+                    <td>{{item.FechaIngresoMascota}}</td>
+                    <td>{{item.Hora}}</td>
+                    <td>{{item.Vacunas}}</td>
+                    <td>{{item.MotivoPresentacion}}</td>
+                    <td>{{item.MotivoConsulta}}</td>
+                    <td>{{item.InformacionImportanteMascota}}</td>
+                    <td class="iconos">
+                        <i routerLink="/VistaConsultaEs/{{item.ID}}" class="fas fa-eye"></i>
+                        <i routerLink="/EditarConsultaEs/{{item.ID}}" class="fas fa-pen-to-square"></i>
+                        <i (click)="deteleQuery(item.ID!)" class="fas fa-trash-alt"></i>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>

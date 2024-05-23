@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://github.com/Andres06B/imagenes/blob/main/Captura_de_pantalla_2024-05-12_161340-removebg-preview%20(1).png?raw=true" alt="Adry Veterinaria Logo" class="mr-2">
+            <span class="text-coral">Adry</span>Veterinaria
+        </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <button class="btn btn-outline-success" type="button" aria-label="Log out" routerLink="/opcionMenu">
+                    <i class="fa-solid fa-right-from-bracket ms-1" aria-hidden="true"></i>
+                    Volver
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="search-add-container">
+        <div class="search-container">
+            <form class="d-flex" (submit)="filterList()">
+                <input class="form-control me-2" type="search" placeholder="Buscar por Propietario" [(ngModel)]="searchText" name="searchText" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+        <div class="add-appointment-container">
+            <button class="btn btn-primary" type="button" routerLink="/AgregarConsulta">Agregar Cita</button>
+        </div>
+    </div>
+    <div class="table-container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Especie</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Raza</th>
+                    <th scope="col">Fecha Nacimiento</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Propietario</th>
+                    <th scope="col">Cédula</th>
+                    <th scope="col">Celular</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Valor de Consulta</th>
+                    <th scope="col">Fecha de Cita</th>
+                    <th scope="col">Hora de Cita</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of filteredList" class="table-active">
+                    <td>{{item.ID}}</td>
+                    <td>{{item.Nombre}}</td>
+                    <td>{{item.Especie}}</td>
+                    <td>{{item.Sexo}}</td>
+                    <td>{{item.Raza}}</td>
+                    <td>{{item.FechaNacimiento | date:'yyyy-MM-dd'}}</td>
+                    <td>{{item.Edad}}</td>
+                    <td>{{item.Propietario}}</td>
+                    <td>{{item.Cedula}}</td>
+                    <td>{{item.Celular}}</td>
+                    <td>{{item.Direccion}}</td>
+                    <td>{{item.Correo}}</td>
+                    <td>{{item.ValorConsulta | currency}}</td>
+                    <td>{{item.FechaCita | date:'yyyy-MM-dd'}}</td>
+                    <td>{{item.HoraCita}}</td>
+                    <td class="iconos">
+                        <i routerLink="/VistaConsulta/{{ item.ID }}" class="fas fa-eye"></i>
+                        <i routerLink="/EditarConsulta/{{ item.ID }}" class="fas fa-pen-to-square"></i>
+                        <i (click)="deteleQuery(item.ID!)" class="fas fa-trash-alt"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

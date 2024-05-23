@@ -1,0 +1,132 @@
+.navbar {
+    background-color: #001a4f;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand img {
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.text-coral {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+.search-add-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem; /* Adjusted margin-top */
+    font-family: "Montserrat", sans-serif;
+}
+
+.form-control {
+    border-radius: 20px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+}
+
+.btn-outline-success {
+    background-color: #ff6347;
+    color: white;
+    font-weight: bold;
+    border-color: #ff6347;
+    border-radius: 20px;
+    padding: 0.75rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.btn-outline-success:hover {
+    background-color: #fff;
+    color: #ff6347;
+}
+
+.btn-primary {
+    border-radius: 20px;
+    padding: 0.75rem 1rem;
+    border: none;
+    background-color: #001a4f;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #001a4f;
+    border: 1px solid #001a4f;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+
+
+.table {
+    min-width: 1400px;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1.05rem;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    text-align: left;
+    white-space: nowrap;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+.table thead th {
+    background-color: #001a4f;
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid #001a4f;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.owner-row {
+    vertical-align: middle !important;
+}
+
+.iconos {
+    font-size: 1.2rem;
+}
+
+.iconos i {
+    margin-right: 0.5rem;
+    cursor: pointer;
+    color: #001a4f;
+}
+
+.iconos i:hover {
+    color: #001a4f;
+}

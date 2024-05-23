@@ -1,0 +1,99 @@
+/* Estilos generales */
+section{
+  font-family: Arial, sans-serif;
+  background: #ECE9E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Estilos para el wrapper */
+/* Estilos para el wrapper */
+.wrapper {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Estilos para el logo */
+.logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el título */
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Estilos para los inputs */
+.form-control {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Estilos para los labels */
+label {
+  font-size: 14px;
+  color: #999;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.form-floating:focus-within label,
+.form-floating .form-control:not(:placeholder-shown) ~ label {
+  top: -15px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+/* Estilos para el botón */
+.btn-primary {
+  background-color: #001a4f;
+  border-color: #001a4f;
+  font-size: 18px;
+  padding: 12px 0;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #fff;
+}
+
+/* Estilos para el enlace */
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}

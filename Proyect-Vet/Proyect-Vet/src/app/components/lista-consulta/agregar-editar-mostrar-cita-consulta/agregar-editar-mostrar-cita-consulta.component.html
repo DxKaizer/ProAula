@@ -1,0 +1,109 @@
+<div class="container mt-5">
+    <div class="form-image">
+        <img src="https://github.com/Andres06B/imagenes/blob/main/images5-removebg-preview.png?raw=true" alt="Mascota">
+    </div>
+    <div>
+        <h2 class="mb-4">{{ operacion }} los datos de la mascota:</h2>
+        <form [formGroup]="form" novalidate (ngSubmit)="addCita()" (ngSubmit)="envioCorreo()">
+            <div class="mb-3">
+                <label for="nombre" class="form-label"><i class="icon fas fa-pen-to-square"></i>Nombre:</label>
+                <input type="text" class="form-control" id="nombre" formControlName="Nombre">
+                <span *ngIf="form.get('Nombre')?.hasError('required') && form.get('Nombre')?.touched">El campo nombre es
+                    <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="especie" class="form-label"><i class="icon fas fa-pen-to-square"></i>Especie:</label>
+                <input type="text" class="form-control" id="especie" formControlName="Especie">
+                <span *ngIf="form.get('Especie')?.hasError('required') && form.get('Especie')?.touched">El campo Especie
+                    es <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="sexo" class="form-label"><i class="icon fas fa-pen-to-square"></i>Sexo:</label>
+                <select class="form-select" id="sexo" formControlName="Sexo">
+                    <option value="M">Macho</option>
+                    <option value="F">Hembra</option>
+                </select>
+                <span *ngIf="form.get('Sexo')?.hasError('required') && form.get('Sexo')?.touched">El campo Sexo es
+                    <strong>Requerido</strong></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="raza" class="form-label"><i class="icon fas fa-pen-to-square"></i>Raza:</label>
+                <input type="text" class="form-control" id="raza" formControlName="Raza">
+                <span *ngIf="form.get('Raza')?.hasError('required') && form.get('Raza')?.touched">El campo Raza es
+                    <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="fecha_nacimiento" class="form-label"><i class="icon fas fa-pen-to-square"></i>Fecha de
+                    Nacimiento:</label>
+                <input type="date" class="form-control" id="fecha_nacimiento" formControlName="FechaNacimiento">
+                <span
+                    *ngIf="form.get('FechaNacimiento')?.hasError('required') && form.get('FechaNacimiento')?.touched">El
+                    campo fecha de nacimiento es <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="edad" class="form-label"><i class="icon fas fa-pen-to-square"></i>Edad:</label>
+                <input type="number" class="form-control" id="edad" formControlName="Edad">
+                <span *ngIf="form.get('Edad')?.hasError('required') && form.get('Edad')?.touched">El campo Edad es
+                    <strong>Requerido</strong></span>
+            </div>
+
+            <h2 class="mb-4">Datos del Propietario:</h2>
+            <div class="mb-3">
+                <label for="propietario" class="form-label"><i class="icon fas fa-pen-to-square"></i>Nombre del
+                    Propietario:</label>
+                <input type="text" class="form-control" id="propietario" formControlName="Propietario">
+                <span *ngIf="form.get('Propietario')?.hasError('required') && form.get('Propietario')?.touched">El campo
+                    Propietario es <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="cedula" class="form-label"><i class="icon fas fa-pen-to-square"></i>Cédula:</label>
+                <input type="text" class="form-control" id="cedula" formControlName="Cedula">
+                <span *ngIf="form.get('Cedula')?.hasError('required') && form.get('Cedula')?.touched">El campo Cedula es
+                    <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="celular" class="form-label"><i class="icon fas fa-pen-to-square"></i>Celular:</label>
+                <input type="tel" class="form-control" id="celular" formControlName="Celular">
+                <span *ngIf="form.get('Celular')?.hasError('required') && form.get('Celular')?.touched">El campo Celular
+                    es <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="direccion" class="form-label"><i class="icon fas fa-pen-to-square"></i>Dirección:</label>
+                <input type="text" class="form-control" id="direccion" formControlName="Direccion">
+                <span *ngIf="form.get('Direccion')?.hasError('required') && form.get('Direccion')?.touched">El campo
+                    Direccion es <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="correo" class="form-label"><i class="icon fas fa-pen-to-square"></i>Correo:</label>
+                <input type="email" class="form-control" id="correo" formControlName="Correo">
+                <span *ngIf="form.get('Correo')?.hasError('required') && form.get('Correo')?.touched">El campo Correo es
+                    <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="valor_consulta" class="form-label"><i class="icon fas fa-pen-to-square"></i>Valor de
+                    Consulta:</label>
+                <input type="number" class="form-control" id="valor_consulta" formControlName="ValorConsulta">
+                <span *ngIf="form.get('ValorConsulta')?.hasError('required') && form.get('ValorConsulta')?.touched">El
+                    campo valor de Consulta es <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="fecha_cita" class="form-label"><i class="icon fas fa-pen-to-square"></i>Fecha de
+                    Cita:</label>
+                <input type="date" class="form-control" id="fecha_cita" formControlName="FechaCita">
+                <span *ngIf="form.get('FechaCita')?.hasError('required') && form.get('FechaCita')?.touched">El campo
+                    fecha de Cita es <strong>Requerido</strong></span>
+            </div>
+            <div class="mb-3">
+                <label for="hora_cita" class="form-label"><i class="icon fas fa-pen-to-square"></i>Hora de Cita:</label>
+                <input type="time" class="form-control" id="hora_cita" formControlName="HoraCita">
+                <span *ngIf="form.get('HoraCita')?.hasError('required') && form.get('HoraCita')?.touched">El campo hora
+                    de Cita es <strong>Requerido</strong></span>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary" routerLink="/ListaConsulta">Volver</button>
+                <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Agregar</button>
+            </div>
+        </form>
+    </div>
+</div>
