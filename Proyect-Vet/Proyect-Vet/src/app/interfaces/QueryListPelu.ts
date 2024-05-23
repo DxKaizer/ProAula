@@ -1,5 +1,4 @@
 export interface peluqueria{
-    getConsultas(): unknown;
     ID?: number;
     FechaEntrada: Date;
     Hora: string;

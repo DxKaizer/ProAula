@@ -45,7 +45,8 @@ const routes: Routes = [
 
   { path: 'ListaPeluqueria', component: ListaPeluqueriaComponent},
   { path: 'AgregarPeluqueria', component: AgregarEditarMostrarCitaPeluqueriaComponent },
-  {path: 'vistaPeluqueria', component:VistaDetallesPeluqueriaComponent},
+  {path: 'EditarPeluqueria/:id', component: AgregarEditarMostrarCitaPeluqueriaComponent},
+  {path: 'vistaPeluqueria/:id', component:VistaDetallesPeluqueriaComponent},
 
   //redireccion
   { path: '**', redirectTo: 'homePage', pathMatch: 'full' }

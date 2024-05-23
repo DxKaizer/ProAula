@@ -4,61 +4,76 @@
     </div>
     <div>
         <h2 class="mb-4">Datos de Peluqueria</h2>
-        <form action="#" method="POST">
+        <form [formGroup]="form" novalidate (ngSubmit)="addCita()" (ngSubmit)="envioCorreo()">
             <div class="mb-3">
                 <label for="fecha_entrada" class="form-label"><i class="icon fas fa-pen-to-square"></i>Fecha de Entrada:</label>
-                <input type="date" class="form-control" id="fecha_entrada" name="fecha_entrada" required>
+                <input type="date" class="form-control" id="fecha_entrada" formControlName="FechaEntrada">
+                <span *ngIf="form.get('FechaEntrada')?.hasError('required') && form.get('FechaEntrada')?.touched">El campo fecha es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="hora" class="form-label"><i class="icon fas fa-pen-to-square"></i>Hora:</label>
-                <input type="time" class="form-control" id="hora" name="hora" required>
+                <input type="time" class="form-control" id="hora" formControlName="Hora">
+                <span *ngIf="form.get('Hora')?.hasError('required') && form.get('Hora')?.touched">El campo hora es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="nombre_animal" class="form-label"><i class="icon fas fa-pen-to-square"></i>Nombre del Animal:</label>
-                <input type="text" class="form-control" id="nombre_animal" name="nombre_animal" required>
+                <input type="text" class="form-control" id="nombre_animal" formControlName="NombreAnimal">
+                <span *ngIf="form.get('NombreAnimal')?.hasError('required') && form.get('NombreAnimal')?.touched">El campo nombre del animal es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="nombre_dueño" class="form-label"><i class="icon fas fa-pen-to-square"></i>Nombre del Dueño:</label>
-                <input type="text" class="form-control" id="nombre_dueño" name="nombre_dueño" required>
+                <input type="text" class="form-control" id="nombre_dueño" formControlName="NombreDueno">
+                <span *ngIf="form.get('NombreDueno')?.hasError('required') && form.get('NombreDueno')?.touched">El campo nombre del dueño es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="especie" class="form-label"><i class="icon fas fa-pen-to-square"></i>Especie:</label>
-                <input type="text" class="form-control" id="especie" name="especie">
+                <input type="text" class="form-control" id="especie" formControlName="Especie">
+                <span *ngIf="form.get('Especie')?.hasError('required') && form.get('Especie')?.touched">El campo especie es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="raza" class="form-label"><i class="icon fas fa-pen-to-square"></i>Raza:</label>
-                <input type="text" class="form-control" id="raza" name="raza">
+                <input type="text" class="form-control" id="raza" formControlName="Raza">
+                <span *ngIf="form.get('Raza')?.hasError('required') && form.get('Raza')?.touched">El campo raza es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="color" class="form-label"><i class="icon fas fa-pen-to-square"></i>Color:</label>
-                <input type="text" class="form-control" id="color" name="color">
+                <input type="text" class="form-control" id="color" formControlName="Color">
+                <span *ngIf="form.get('Color')?.hasError('required') && form.get('Color')?.touched">El campo color es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="telefono" class="form-label"><i class="icon fas fa-pen-to-square"></i>Teléfono:</label>
-                <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{10}">
+                <input type="tel" class="form-control" id="telefono" formControlName="Telefono">
+                <span *ngIf="form.get('Telefono')?.hasError('required') && form.get('Telefono')?.touched">El campo teléfono es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="peluquero" class="form-label"><i class="icon fas fa-pen-to-square"></i>Peluquero Responsable:</label>
-                <input type="text" class="form-control" id="peluquero" name="peluquero">
+                <input type="text" class="form-control" id="peluquero" formControlName="PeluqueroResponsable">
+                <span *ngIf="form.get('PeluqueroResponsable')?.hasError('required') && form.get('PeluqueroResponsable')?.touched">El campo peluquero responsable es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="observaciones" class="form-label"><i class="icon fas fa-pen-to-square"></i>Observaciones:</label>
-                <input type="text" class="form-control" id="observaciones" name="observaciones">
+                <input type="text" class="form-control" id="observaciones" formControlName="Observaciones">
+                <span *ngIf="form.get('Observaciones')?.hasError('required') && form.get('Observaciones')?.touched">El campo observaciones es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="tipo_baño" class="form-label"><i class="icon fas fa-pen-to-square"></i>Tipo de Baño:</label>
-                <input type="text" class="form-control" id="tipo_baño" name="tipo_baño">
+                <input type="text" class="form-control" id="tipo_baño" formControlName="TipoBano">
+                <span *ngIf="form.get('TipoBano')?.hasError('required') && form.get('TipoBano')?.touched">El campo tipo de baño es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="valor" class="form-label"><i class="icon fas fa-pen-to-square"></i>Valor:</label>
-                <input type="number" class="form-control" id="valor" name="valor">
+                <input type="number" class="form-control" id="valor" formControlName="Valor">
+                <span *ngIf="form.get('Valor')?.hasError('required') && form.get('Valor')?.touched">El campo valor es <strong>Requerido</strong></span>
             </div>
             <div class="mb-3">
                 <label for="hora_salida" class="form-label"><i class="icon fas fa-pen-to-square"></i>Hora de Salida:</label>
-                <input type="time" class="form-control" id="hora_salida" name="hora_salida">
+                <input type="time" class="form-control" id="hora_salida" formControlName="HoraSalida">
+                <span *ngIf="form.get('HoraSalida')?.hasError('required') && form.get('HoraSalida')?.touched">El campo hora de salida es <strong>Requerido</strong></span>
             </div>
-            <button type="submit" class="btn btn-primary">Agregar</button>
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-secondary" routerLink="/ListaPeluqueria">Volver</button>
+                <button type="submit" class="btn btn-primary" [disabled]="!form.valid"> agregar Cita</button>
+            </div>
         </form>
     </div>
 </div>
-

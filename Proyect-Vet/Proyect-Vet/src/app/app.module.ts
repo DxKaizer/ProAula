@@ -26,6 +26,7 @@ import { AgregarEditarMostrarCitaConsultaEsComponent } from './components/lista-
 import { AgregarEditarMostrarCitaPeluqueriaComponent } from './components/lista-peluqueria/agregar-editar-mostrar-cita-peluqueria/agregar-editar-mostrar-cita-peluqueria.component';
 import { VistaDetallesConsultaComponent } from './components/lista-consulta/vista-detalles-consulta/vista-detalles-consulta.component';
 import { VistaDetallesConsultaEsComponent } from './components/lista-consulta-es/vista-detalles-consulta-es/vista-detalles-consulta-es.component';
+import { VistaDetallesPeluqueriaComponent } from './components/lista-peluqueria/vista-detalles-peluqueria/vista-detalles-peluqueria.component';
 
 
 
@@ -50,6 +51,7 @@ import { VistaDetallesConsultaEsComponent } from './components/lista-consulta-es
     AgregarEditarMostrarCitaPeluqueriaComponent,
     VistaDetallesConsultaComponent,
     VistaDetallesConsultaEsComponent,
+    VistaDetallesPeluqueriaComponent
 
   ],
   imports: [

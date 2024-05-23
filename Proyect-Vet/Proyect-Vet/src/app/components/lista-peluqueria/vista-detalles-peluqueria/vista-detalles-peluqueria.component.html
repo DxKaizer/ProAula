@@ -1,1 +1,67 @@
-<p>vista-detalles-peluqueria works!</p>
+<div class="container mt-5">
+    <div class="form-image">
+        <img src="https://github.com/Andres06B/imagenes/blob/main/images5-removebg-preview.png?raw=true" alt="Mascota">
+    </div>
+    <div>
+        <h2 class="mb-4">Detalles de la peluqueria</h2>
+        <div *ngIf="consulta">
+            <div class="mb-3">
+                <div class="mb-3">
+                    <label class="form-label">Fecha de Entrada:</label>
+                    <p>{{ consulta.FechaEntrada }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Hora:</label>
+                    <p>{{ consulta.Hora }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nombre del Animal:</label>
+                    <p>{{ consulta.NombreAnimal }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nombre del Dueño:</label>
+                    <p>{{ consulta.NombreDueno }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Especie:</label>
+                    <p>{{ consulta.Especie }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Raza:</label>
+                    <p>{{ consulta.Raza }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Color:</label>
+                    <p>{{ consulta.Color }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Teléfono:</label>
+                    <p>{{ consulta.Telefono }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Peluquero Responsable:</label>
+                    <p>{{ consulta.PeluqueroResponsable }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Observaciones:</label>
+                    <p>{{ consulta.Observaciones }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Tipo de Baño:</label>
+                    <p>{{ consulta.TipoBano }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Valor:</label>
+                    <p>{{ consulta.Valor }}</p>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Hora de Salida:</label>
+                    <p>{{ consulta.HoraSalida }}</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" routerLink="/ListaPeluqueria">Volver</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
